@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的青健",
+  "usingComponents": {
+    "demo-notice": "/components/demo-notice/index",
+    "training-chart": "/components/training-chart/index"
+  }
+}

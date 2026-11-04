@@ -1,0 +1,1 @@
+<view class="chart-wrap" style="height:{{height}}rpx"><canvas type="2d" id="plot" class="plot" aria-label="训练数据图表"/></view>

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "current_positive_checks": 5,
+  "historical_negative_reproductions": 1,
+  "checks": {
+    "historical_bug_reproduced": {
+      "observed": true,
+      "verdict": "EXPECTED_NEGATIVE_REPRODUCTION_NOT_CURRENT_PASS",
+      "detail": "Published45 reissued a completed FPGA record under a new software ID after malformed input reset"
+    },
+    "committed_retry_after_error": {
+      "passed": true,
+      "no_new_id": true,
+      "canonical_record_unchanged": true
+    },
+    "old_completed_record_never_republished": {
+      "passed": true
+    },
+    "serial32_wrap_admitted": {
+      "passed": true
+    },
+    "changed_committed_snapshot_rejected": {
+      "passed": true
+    },
+    "late_verified_retry_preserves_new_prefix": {
+      "passed": true
+    }
+  },
+  "hardware_access": false,
+  "scope": "Offline protocol replay;not source-epoch persistence across processes or board identity proof",
+  "current_source_sha256": "8fb26c673ddb034383c2b056ab83e113f15670bb389adc71324bcacd14b47bea",
+  "historical_source_sha256": "ecc0510dd446ffba03292c6d228c29dce82f30586b3b9101736d40e0be71823e"
+}

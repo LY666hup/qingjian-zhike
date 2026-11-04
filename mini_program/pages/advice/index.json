@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "训练与教学建议",
+  "usingComponents": {
+    "demo-notice": "/components/demo-notice/index"
+  }
+}

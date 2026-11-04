@@ -1,0 +1,2 @@
+const config=require('../../config'),session=require('../../services/session');
+Page({data:{role:'teacher',isDemo:config.mode!=='live'},onShow(){this.setData({role:session.get().role,isDemo:config.mode!=='live'});},select(e){this.setData({role:e.currentTarget.dataset.role});},enter(){if(config.mode==='live'){wx.showToast({title:'真实登录需接入后端身份服务',icon:'none'});return;}session.select(this.data.role);wx.switchTab({url:this.data.role==='student'?'/pages/mine/index':'/pages/home/index'});}});

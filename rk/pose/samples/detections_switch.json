@@ -1,0 +1,19 @@
+{
+  "source": "Ly board YOLO output, box remapped from the 640 canvas to the 960x540 preview",
+  "preview_size": [
+    960,
+    540
+  ],
+  "detections": [
+    {
+      "person_id": "P9",
+      "score": 0.4,
+      "xyxy": [
+        10.0,
+        300.0,
+        300.0,
+        540.0
+      ]
+    }
+  ]
+}

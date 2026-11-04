@@ -1,0 +1,17 @@
+{
+  "schema": "qjzc.four_inputs.draft1",
+  "inputs": {},
+  "note": "No endpoints provided; do not reuse historical sessions. Each input gray/gaussian/histogram/B requires fields below. Loading does not connect.",
+  "required_fields": [
+    "camera_id",
+    "processing_mode",
+    "session_id",
+    "boot_id",
+    "fpga_bit_sha256",
+    "processor",
+    "video_url",
+    "status_url",
+    "authorized_until"
+  ],
+  "authorized_until_format": "ISO8601 timestamp with timezone; only fresh approved windows"
+}

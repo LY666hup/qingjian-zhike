@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "运动画像",
+  "usingComponents": {
+    "demo-notice": "/components/demo-notice/index",
+    "training-chart": "/components/training-chart/index"
+  }
+}

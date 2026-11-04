@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "训练表现与报告",
+  "usingComponents": {
+    "demo-notice": "/components/demo-notice/index",
+    "training-chart": "/components/training-chart/index"
+  }
+}

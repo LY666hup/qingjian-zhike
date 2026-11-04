@@ -1,0 +1,37 @@
+{
+  "image": "samples/frame_0001_seq_000012.jpg",
+  "jpeg_sha256": "a4a3733e234b008caa81cdf2c68a1c306a51836d4b19e3b0aeb5f79e712ffe03",
+  "input_record_id": "rk-A-gaussian-000123",
+  "identity": {
+    "session_id": "1df3f2e6e59d4f0097e93ae13dae7d79",
+    "boot_id": "35095b5a-c6e6-42c5-9dc3-0874124d3bef",
+    "camera_id": "A",
+    "processing_mode": "gaussian",
+    "fpga_bit_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "processor": "fpga"
+  },
+  "preview_sequence": 123,
+  "source_frame_id": null,
+  "timestamp_ms": 1762000000123,
+  "time_source": "board_monotonic",
+  "capture_group_id": null,
+  "detections": {
+    "input_record_id": "rk-A-gaussian-000123",
+    "jpeg_sha256": "a4a3733e234b008caa81cdf2c68a1c306a51836d4b19e3b0aeb5f79e712ffe03",
+    "camera_id": "A",
+    "processing_mode": "gaussian",
+    "coordinate_space": "preview_pixels",
+    "items": [
+      {
+        "person_id": "P1",
+        "xyxy": [
+          237.75,
+          0.0,
+          720.75,
+          540.0
+        ],
+        "score": 0.85
+      }
+    ]
+  }
+}

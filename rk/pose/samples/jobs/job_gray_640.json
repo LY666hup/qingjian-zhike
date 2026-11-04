@@ -1,0 +1,37 @@
+{
+  "image": "samples/frame_640x360.jpg",
+  "jpeg_sha256": "4be7c432b9c1f5d863851dc21cf4d2fae06c7e8ba8b54a05b7c1b9ad1b406ffc",
+  "input_record_id": "rk-A-gray-000500",
+  "identity": {
+    "session_id": "1df3f2e6e59d4f0097e93ae13dae7d79",
+    "boot_id": "35095b5a-c6e6-42c5-9dc3-0874124d3bef",
+    "camera_id": "A",
+    "processing_mode": "gray",
+    "fpga_bit_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "processor": "fpga"
+  },
+  "preview_sequence": 40,
+  "source_frame_id": null,
+  "timestamp_ms": 1762000000400,
+  "time_source": "board_monotonic",
+  "capture_group_id": null,
+  "detections": {
+    "input_record_id": "rk-A-gray-000500",
+    "jpeg_sha256": "4be7c432b9c1f5d863851dc21cf4d2fae06c7e8ba8b54a05b7c1b9ad1b406ffc",
+    "camera_id": "A",
+    "processing_mode": "gray",
+    "coordinate_space": "preview_pixels",
+    "items": [
+      {
+        "person_id": "P1",
+        "xyxy": [
+          158.5,
+          0.0,
+          480.5,
+          360.0
+        ],
+        "score": 0.85
+      }
+    ]
+  }
+}

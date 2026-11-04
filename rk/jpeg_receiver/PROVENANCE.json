@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-11-03T09:41:54.014743+08:00",
+  "state": "RECEIVER_V2_PREPARED_ONLY",
+  "protocol": "QJJC/2 unchanged",
+  "software_record_schema": "qjzc.fpga_jpeg.record.v1;main application mapping pending",
+  "current_positive_checks": 19,
+  "historical_expected_negative_reproductions": 1,
+  "hardware_access": false,
+  "driver_or_service_modified": false,
+  "actual_board_acceptance": false,
+  "current_board": "39 raw_preview,last user download identity;not touched",
+  "cross_process_session_persistence": "Caller must create new real session;not implemented in this SDK"
+}

@@ -1,0 +1,9 @@
+{
+  "desc": "课堂演示页面不被索引",
+  "rules": [
+    {
+      "action": "disallow",
+      "page": "*"
+    }
+  ]
+}

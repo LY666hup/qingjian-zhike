@@ -1,0 +1,16 @@
+{
+  "schema": "qjzc.four_inputs.draft1",
+  "inputs": {
+    "gray": {
+      "camera_id": "A",
+      "processing_mode": "gray",
+      "session_id": "2991812ce6cb4b6f9ccbbcf26c174e7c",
+      "boot_id": "3b799352-b4d5-447e-a27c-ae3e43953bc3",
+      "fpga_bit_sha256": "183ed9345e8934f08b7ea87814e33a554ed97b03371690319d7b7605a3fc1afb",
+      "processor": "fpga",
+      "video_url": "http://169.254.67.238:8090/session/2991812ce6cb4b6f9ccbbcf26c174e7c/stream.mjpg?session=2991812ce6cb4b6f9ccbbcf26c174e7c",
+      "status_url": "http://169.254.67.238:8090/session/2991812ce6cb4b6f9ccbbcf26c174e7c/status.json",
+      "authorized_until": "2026-10-31T23:35:00+08:00"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "实时课堂",
+  "usingComponents": {
+    "demo-notice": "/components/demo-notice/index"
+  }
+}

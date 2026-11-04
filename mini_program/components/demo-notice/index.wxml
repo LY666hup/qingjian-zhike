@@ -1,0 +1,1 @@
+<view class="demo"><text class="badge">{{test?'联调':mock?'DEMO':'LIVE'}}</text><text>{{test?'联调模式 · 连接本地测试服务':mock?'模拟数据展示 · 非硬件实测':'数据由已配置的数据服务提供'}}</text></view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "历史课堂",
+  "usingComponents": {
+    "demo-notice": "/components/demo-notice/index"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "演示身份",
+  "usingComponents": {
+    "demo-notice": "/components/demo-notice/index"
+  }
+}

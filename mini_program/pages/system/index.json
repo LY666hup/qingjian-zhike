@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "系统状态",
+  "usingComponents": {
+    "demo-notice": "/components/demo-notice/index"
+  }
+}

@@ -1,0 +1,11 @@
+aclk; 1
+aresetn; 1
+s_axis_dividend_tdata; 1
+s_axis_dividend_tvalid; 1
+s_axis_dividend_tready; 0
+s_axis_divisor_tdata; 1
+s_axis_divisor_tvalid; 1
+s_axis_divisor_tready; 0
+m_axis_dout_tdata; 1
+m_axis_dout_tvalid; 1
+m_axis_dout_tready; 0

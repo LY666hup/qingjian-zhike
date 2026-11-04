@@ -1,0 +1,19 @@
+{
+  "source": "the 960x540 board box scaled to the 640x360 frame",
+  "preview_size": [
+    640,
+    360
+  ],
+  "detections": [
+    {
+      "person_id": "P1",
+      "score": 0.8525,
+      "xyxy": [
+        158.5,
+        0.0,
+        480.5,
+        360.0
+      ]
+    }
+  ]
+}

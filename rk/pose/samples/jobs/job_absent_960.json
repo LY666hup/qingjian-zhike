@@ -1,0 +1,26 @@
+{
+  "image": "samples/frame_0001_seq_000012.jpg",
+  "jpeg_sha256": "a4a3733e234b008caa81cdf2c68a1c306a51836d4b19e3b0aeb5f79e712ffe03",
+  "input_record_id": "rk-A-gray-000400",
+  "identity": {
+    "session_id": "1df3f2e6e59d4f0097e93ae13dae7d79",
+    "boot_id": "35095b5a-c6e6-42c5-9dc3-0874124d3bef",
+    "camera_id": "A",
+    "processing_mode": "gray",
+    "fpga_bit_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "processor": "fpga"
+  },
+  "preview_sequence": 30,
+  "source_frame_id": null,
+  "timestamp_ms": 1762000000300,
+  "time_source": "board_monotonic",
+  "capture_group_id": null,
+  "detections": {
+    "input_record_id": "rk-A-gray-000400",
+    "jpeg_sha256": "a4a3733e234b008caa81cdf2c68a1c306a51836d4b19e3b0aeb5f79e712ffe03",
+    "camera_id": "A",
+    "processing_mode": "gray",
+    "coordinate_space": "preview_pixels",
+    "items": []
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "architecture": "aarch64",
+  "python": "3.11",
+  "capture_device": "/dev/video22",
+  "pixel_format": "YUYV",
+  "pose_installer": "rk/pose/bin/02_install_offline.sh",
+  "yolo_backend": "rknnlite",
+  "npu_core": 0
+}

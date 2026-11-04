@@ -1,0 +1,35 @@
+<view class="page">
+  <view class="page-heading"><view class="eyebrow">TEACHING IN MOTION</view><view class="title">实时课堂</view><view class="subtitle">全班状态，一眼掌握</view></view>
+  <view class="card connection-entry"><view class="row"><text class="name">计数联调 {{connectionBuild}}</text><text class="pill {{streamState==='test_connected'?'':'offline'}}">{{streamState==='test_connected'?'控制台已连接':'等待连接'}}</text></view><view class="hint">电脑控制台与当前课堂共用一轮数据；仅点击后台+1才增加计数。</view><button class="secondary" bindtap="connectConsole" disabled="{{connecting}}">{{connecting?'正在连接…':'连接计数控制台'}}</button><view wx:if="{{connectionError}}" class="error">{{connectionError}}</view></view><view class="row"><text class="hint">微信开发调试工具</text><text class="link" bindtap="closeDebug">关闭 vConsole 浮窗</text></view><demo-notice/><view wx:if="{{restricted}}" class="card"><view class="name">这是教师的课堂工作台</view><view class="hint">学生可在个人空间查看自己的训练报告、历史与建议。</view><button class="primary" bindtap="personal">进入我的运动空间 →</button></view>
+  <view wx:if="{{error}}" class="error" bindtap="refresh">{{error}} · 点击重试</view>
+  <view wx:if="{{loading}}" class="empty">加载中…</view>
+  <block wx:if="{{classroom}}">
+    <view class="card hero classroom-hero">
+      <view class="row"><view><view class="eyebrow">CURRENT SESSION</view><view class="class-name">{{classroom.class_name}}</view></view><text class="pill">{{classroom.stageLabel}}</text></view>
+      <view class="class-action">{{classroom.action_name}}专项训练<text wx:if="{{isTest}}"> · 第{{classroom.round}}轮</text></view>
+      <view class="session-stats"><view><text>{{classroom.active_count}}</text><view>在训人数</view></view><view><text>{{classroom.finished_count}}<text class="stat-total"> / {{classroom.student_count}}</text></text><view>已完成人数</view></view><view><text>{{classroom.average_score}}</text><view>平均质量</view></view></view>
+      <button wx:if="{{isTest}}" class="secondary" bindtap="newRound">新建一轮 · 选动作和学生 · 从0开始</button><view class="demo-controls"><button class="small-btn start" bindtap="control" data-command="start">{{isTest?(classroom.stage==='paused'?'继续本轮':'开始本轮'):'开始训练'}}</button><button class="small-btn" bindtap="control" data-command="pause">暂停</button><button wx:if="{{isTest}}" class="small-btn" bindtap="control" data-command="finish">结束归档</button><button wx:else="" class="small-btn" bindtap="control" data-command="reset">重置</button></view>
+      <view class="stream-caption"><text class="accent-dot"/>每秒更新 · {{streamState==='test_connected'?'测试服务已连接':streamState==='demo'?'模拟数据流':streamState==='offline'?'连接已断开':streamState}}</view>
+    </view>
+    <view class="section"><view>教师重点关注 <text class="attention-count">{{classroom.attention_count}}</text></view><text class="section-note">服务端排序</text></view>
+    <view class="card attention-list">
+      <view wx:for="{{classroom.attention_queue}}" wx:key="student_id" class="list-row row" bindtap="open" data-id="{{item.student_id}}"><view class="queue-index {{item.status}}">0{{index+1}}</view><view class="grow"><view class="name">{{item.name}}</view><view class="muted">{{item.reason}}</view></view><text class="chevron">›</text></view>
+      <view wx:if="{{!classroom.attention_queue.length}}" class="empty">暂无关注事件</view>
+    </view>
+    <view class="section"><text>全班运动状态</text><text class="section-note">{{classroom.student_count}} 位学生</text></view>
+    <input class="search" placeholder="搜索学生姓名 / 学号" value="{{query}}" bindinput="search"/>
+    <view class="tabs filter-tabs"><view wx:for="{{filters}}" wx:key="id" class="tab {{filter===item.id?'active':''}}" bindtap="filter" data-id="{{item.id}}">{{item.name}}</view></view>
+    <view wx:for="{{visible}}" wx:key="student_id" class="card student-card {{item.status}}-card" bindtap="open" data-id="{{item.student_id}}">
+      <view class="row"><view class="avatar">{{item.initial}}</view><view class="grow"><view class="name">{{item.name}}</view><view class="student-id">NO. {{item.student_id}}</view></view><text class="pill {{item.status}}">{{item.statusLabel}}</text><text class="chevron">›</text></view>
+      <view class="student-measures"><view><view class="measure-label">动作次数</view><text class="reps-value">{{item.reps}}</text><text class="unit">/ {{item.target_reps}} 次</text></view><view class="score-block"><view class="measure-label">动作质量</view><text class="score-value">{{item.score}}</text><text class="unit">分</text></view></view>
+      <view class="track"><view class="fill" style="width:{{item.progress}}%"/></view><view wx:if="{{isTest}}" class="row"><text class="muted">{{item.offset?'含教练修正':'本轮计数'}}</text><button class="small-btn" catchtap="editCount" data-id="{{item.student_id}}">修正次数</button></view>
+      <view class="row event-row"><text class="phase">{{classroom.stage==='ready'?'待开始':classroom.stage==='paused'?'已暂停':classroom.stage==='finished'?'本轮结束':item.reps>=item.target_reps?'已完成':item.phase==='UP'?'起身阶段':'下蹲阶段'}}</text><text class="event-text">{{item.errorText}}</text></view>
+    </view>
+    <view wx:if="{{!visible.length}}" class="empty">没有匹配的学生</view>
+    <view class="hint">系统提供客观动作事件，教师结合现场情况作最终判断。</view>
+  </block>
+</view>
+
+<view wx:if="{{editing}}" class="edit-mask"><view class="edit-panel"><view class="name">修正 {{editing.name}} 的次数</view><view class="hint">保留原始计数；修正须填写原因。并发更新时需重新核对。</view><input class="search" type="number" value="{{editValue}}" bindinput="editValue" placeholder="修正后次数"/><input class="search" maxlength="100" value="{{editReason}}" bindinput="editReason" placeholder="原因：漏计、错计等"/><view wx:if="{{editError}}" class="error">{{editError}}</view><button class="primary" bindtap="saveCount" disabled="{{saving}}">确认修正</button><button class="secondary" bindtap="cancelEdit" disabled="{{saving}}">取消</button></view></view>
+
+<view wx:if="{{setup}}" class="edit-mask"><view class="edit-panel"><view class="name">新建训练轮次</view><view class="hint">所选学生次数从0开始；历史报告保留。</view><picker range="{{setupActions}}" value="{{setupActionIndex}}" bindchange="chooseAction"><view class="search">动作：{{setupActions[setupActionIndex]}} ▾</view></picker><input class="search" type="number" value="{{setupTarget}}" bindinput="chooseTarget" placeholder="目标次数"/><checkbox-group bindchange="chooseStudents"><label wx:for="{{setup.roster}}" wx:key="student_id" class="setup-student"><checkbox value="{{item.student_id}}" checked="{{item.selected}}"/>{{item.name}}</label></checkbox-group><view wx:if="{{setupError}}" class="error">{{setupError}}</view><button class="primary" bindtap="saveSetup" disabled="{{setupSaving}}">确定新建（计数清零）</button><button class="secondary" bindtap="cancelSetup" disabled="{{setupSaving}}">取消</button></view></view>

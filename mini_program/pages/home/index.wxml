@@ -1,0 +1,30 @@
+<view class="page home-page">
+  <view class="profileBar">
+    <view class="profileMain" bindtap="goIdentity"><view class="avatar">青</view><view><view class="profileEyebrow">QINGJIAN · SMART PE</view><view class="profileName">青健智课</view><view class="profileMeta">{{viewer.role==='student'?'学生运动空间':'教师工作台'}} · 看见每一次进步</view></view></view>
+    <view class="deviceShortcut" bindtap="goSystem"><view class="deviceDot"/><text>{{isDemo?'演示模式':'设备状态'}}</text><text>›</text></view>
+  </view>
+  <demo-notice/>
+  <view wx:if="{{error}}" class="error" bindtap="refresh">{{error}} · 点击重试</view>
+  <view wx:elif="{{loading}}" class="empty">正在加载…</view>
+  <block wx:if="{{classroom}}">
+    <view class="trainingHero"><view class="heroGlow"/>
+      <view class="heroTop"><view><view class="heroEyebrow">{{viewer.role==='student'?'MY MOVEMENT':'TODAY’S CLASS'}}</view><view class="heroDate">{{classroom.date}} · {{isDemo?'样例课程':classroom.time}}</view></view><view class="heroSource">{{classroom.stageLabel}}</view></view>
+      <view class="heroTitle">{{viewer.role==='student'?'把每一组，做得更好':classroom.class_name}}</view><view class="lesson-subtitle">{{classroom.lesson}}</view>
+      <view class="heroStats"><view class="heroStat"><text class="statValue">{{viewer.role==='student'?personal.reps:classroom.student_count}} {{viewer.role==='student'?'次':'人'}}</text><text class="statLabel">{{viewer.role==='student'?'本次动作':'班级学生'}}</text></view><view class="statDivider"/><view class="heroStat"><text class="statValue">{{viewer.role==='student'?personal.score:classroom.finished_count}} {{viewer.role==='student'?'分':'人'}}</text><text class="statLabel">{{viewer.role==='student'?'动作质量':'完成本轮'}}</text></view><view class="progressBadge"><text>{{viewer.role==='student'?personal.progress:classroom.completionPercent}}%</text></view></view>
+      <button class="heroButton" bindtap="enterMain"><text>{{viewer.role==='student'?'查看本次训练报告':isDemo?'进入演示课堂':'进入当前课堂'}}</text><view class="buttonArrow">→</view></button><view class="hero-footnote">{{viewer.role==='student'?'运动档案、历史趋势与个人训练建议':'多人计数 · 动作反馈 · 课堂回顾'}}</view>
+    </view>
+    <view class="sectionHeading"><view><view class="sectionEyebrow">MOVE WITH PURPOSE</view><view class="sectionTitle">先关注动作，再看次数</view></view><view class="sectionTag">{{viewer.role==='student'?'个人反馈':'教学辅助'}}</view></view>
+    <view class="adviceCard" bindtap="goAdvice"><view class="adviceIcon">AI</view><view class="adviceBody"><view class="adviceTitle">让训练数据，变成下一步建议</view><view class="adviceText">{{viewer.role==='student'?'结合近期评分与反复出现的动作问题，找到下次训练的关注重点。':'先汇总班级共性问题，再安排动作示范与分组指导。'}}</view></view><view class="adviceArrow">›</view></view>
+    <view class="sectionHeading planHeading"><view><view class="sectionEyebrow">{{viewer.role==='student'?'MY ROUTINE':'CLASS ROUTINE'}}</view><view class="sectionTitle">{{viewer.role==='student'?'我的运动日常':'你的课堂工作流'}}</view></view><view class="textLink" bindtap="goHistory">查看记录</view></view>
+    <view class="taskCard">
+      <view class="taskRow" bindtap="enterMain"><view class="taskIndex">01</view><view class="taskInfo"><view class="taskName">{{viewer.role==='student'?'本次训练报告':'开展专项训练'}}</view><view class="taskHint">{{classroom.action_name}} · 动作次数、质量与完成进度</view></view><text class="rowArrow">›</text></view>
+      <view class="taskRow" bindtap="goAnalysis"><view class="taskIndex">02</view><view class="taskInfo"><view class="taskName">{{viewer.role==='student'?'个人运动趋势':'班级统计与分析'}}</view><view class="taskHint">{{viewer.role==='student'?'把历次表现放在一起，看见自己的变化':'成绩分布、常见问题与重点关注学生'}}</view></view><text class="rowArrow">›</text></view>
+      <view class="taskRow" bindtap="goAdvice"><view class="taskIndex">03</view><view class="taskInfo"><view class="taskName">{{viewer.role==='student'?'个性化训练建议':'AI辅助教学建议'}}</view><view class="taskHint">先看数据依据，再决定下一步训练重点</view></view><text class="rowArrow">›</text></view>
+    </view>
+    <view class="insightGrid">
+      <view class="insightCard deviceCard" bindtap="goSystem"><view class="insightTop"><view class="insightIcon">FPGA</view><view class="statusPill">{{isDemo?'待接入':'查看状态'}}</view></view><view class="insightTitle">图像与计算设备</view><view class="insightValue">PH1A90 + RK3576J</view><view class="insightHint">采集、硬件预处理与压缩、NPU推理</view><view class="cardLink">设备与数据来源 →</view></view>
+      <view class="insightCard recordCard" bindtap="goMine"><view class="insightTop"><view class="insightIcon dark">档案</view><view class="miniArrow">↗</view></view><view class="insightTitle">{{viewer.role==='student'?'我的运动档案':'课堂与学生档案'}}</view><view class="insightValue">每一份记录，都有来处</view><view class="insightHint">稳定学生身份关联训练结果</view><view class="cardLink">进入个人中心 →</view></view>
+    </view>
+    <view class="section">课前准备</view><view class="card row"><view><view class="name">课表与动作示范</view><view class="muted">先看课程安排，再熟悉练习动作</view></view><text class="link" bindtap="schedule">查看课表 ›</text></view><button class="secondary" bindtap="tutorials">观看原项目动作示范视频</button><view class="home-signature">青健智课 · FPGA智慧体育<view>让运动被看见，让指导更有依据</view></view>
+  </block>
+</view>

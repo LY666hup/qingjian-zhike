@@ -1,0 +1,87 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/classroom/index",
+    "pages/history/index",
+    "pages/system/index",
+    "pages/student/index",
+    "pages/portrait/index",
+    "pages/identity/index",
+    "pages/mine/index",
+    "pages/statistics/index",
+    "pages/advice/index",
+    "pages/schedule/index",
+    "pages/tutorials/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "青健智课",
+    "navigationBarBackgroundColor": "#f3f7f5",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f3f7f5",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#7c8a8e",
+    "selectedColor": "#237b59",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "assets/icons/home.png",
+        "selectedIconPath": "assets/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/classroom/index",
+        "text": "课堂",
+        "iconPath": "assets/icons/classroom.png",
+        "selectedIconPath": "assets/icons/classroom-active.png"
+      },
+      {
+        "pagePath": "pages/history/index",
+        "text": "记录",
+        "iconPath": "assets/icons/history.png",
+        "selectedIconPath": "assets/icons/history-active.png"
+      },
+      {
+        "pagePath": "pages/schedule/index",
+        "text": "课表",
+        "iconPath": "assets/icons/calendar.png",
+        "selectedIconPath": "assets/icons/calendar-active.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "assets/icons/students.png",
+        "selectedIconPath": "assets/icons/students-active.png"
+      }
+    ],
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "subPackages": [
+    {
+      "root": "tutorial-a",
+      "name": "tutorial-a",
+      "pages": [
+        "pages/watch/index"
+      ]
+    },
+    {
+      "root": "tutorial-b",
+      "name": "tutorial-b",
+      "pages": [
+        "pages/watch/index"
+      ]
+    },
+    {
+      "root": "tutorial-c",
+      "name": "tutorial-c",
+      "pages": [
+        "pages/watch/index"
+      ]
+    }
+  ]
+}

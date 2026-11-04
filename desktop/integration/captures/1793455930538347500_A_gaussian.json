@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "camera_id": null,
+    "diagnostic_snapshot": true,
+    "frame_id": null,
+    "processing_mode": "gaussian",
+    "processor": "fpga-diagnostic-snapshot",
+    "received_monotonic": 23460.7947146,
+    "session_id": null,
+    "source": "replay",
+    "stream_id": null,
+    "transport": "snapshot",
+    "display_camera_slot": "A"
+  },
+  "sha256": "1d86133602e8bc82c3553cf808b875e5c329c3237cc2786043f8cb49f80c9a6f",
+  "scope": "decoded video frame without UI/pose overlay"
+}

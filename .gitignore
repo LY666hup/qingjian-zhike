@@ -1,0 +1,16 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.wlf
+*.db
+*.log
+*.jsonl
+*.sqlite3
+.env
+.env.*
+*.pem
+*.key
+*.lic
+node_modules/
+project.private.config.json

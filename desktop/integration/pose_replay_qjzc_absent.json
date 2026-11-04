@@ -1,0 +1,25 @@
+{
+  "schema": "qjzc.analysis.v1",
+  "stream_id": "mediapipe-replay",
+  "session_id": "v6-offline-replay",
+  "camera_id": "file:A",
+  "frame_id": 4,
+  "source": "replay",
+  "action_type": null,
+  "action_phase": "unknown",
+  "rep_count": null,
+  "correct_count": null,
+  "incorrect_count": null,
+  "quality_score": null,
+  "subject": "unbound person",
+  "pose_state": "not_detected",
+  "error_flags": [
+    "离线回放；无采集时钟；source_frame_id=null"
+  ],
+  "persons": [],
+  "source_frame_id": null,
+  "pose_backend": "mediapipe_cpu",
+  "pose_model_sha256": "4eaa5eb7a98365221087693fcc286334cf0858e2eb6e15b506aa4a7ecdcec4ad",
+  "inference_ms": 53.611131000025125,
+  "pose_frame_identity": "preview_only"
+}

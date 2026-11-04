@@ -1,0 +1,16 @@
+{
+  "schema": "qjzc.windows.inputs.v1",
+  "inputs": {
+    "A_original": {
+      "camera_id": "A",
+      "processing_mode": "original",
+      "session_id": "由Ly填写本轮新会话",
+      "boot_id": "由Ly填写当前启动标识",
+      "fpga_bit_sha256": "由Ly填写完整64位SHA256",
+      "processor": "fpga",
+      "authorized_until": "由Ly填写带时区的本轮截止时间",
+      "status_url": "由Ly填写当前状态地址",
+      "video_url": "由Ly填写当前视频地址"
+    }
+  }
+}

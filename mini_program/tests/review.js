@@ -1,0 +1,43 @@
+const assert=require('node:assert/strict');
+const api=require('../services/api'),session=require('../services/session'),config=require('../config');
+const insights=require('../services/insights');
+global.wx={stopPullDownRefresh(){},showToast(){},navigateTo(){},switchTab(){}};
+async function page(name,options={}){
+ let p;global.Page=x=>p=x;delete require.cache[require.resolve('../pages/'+name+'/index')];require('../pages/'+name+'/index');
+ p.data=JSON.parse(JSON.stringify(p.data));p.setData=x=>Object.assign(p.data,x);if(p.onLoad)p.onLoad(options);
+ await p.onShow();await new Promise(r=>setImmediate(r));return p;
+}
+(async()=>{
+ session.select('teacher');
+ const roster=await api.getStudentList(),stats=await api.getClassStatistics();
+ assert.equal(stats.buckets.reduce((n,b)=>n+b.count,0),roster.length);
+ assert.equal(stats.issues.reduce((n,b)=>n+b.count,0),roster.reduce((n,s)=>n+s.errors.reduce((a,e)=>a+e.count,0),0));
+ assert.equal(insights.classSummary([]).average,null);
+ assert.deepEqual(insights.personalSummary({points:[]}),{count:0,average:null,kneeSessions:0,kneeEvents:0,change:null});
+ assert.equal((await page('statistics')).data.stats.total,12);
+ assert.match((await api.getAdvice()).source,/非大模型/);
+ const d=(await page('system')).data;assert(!('fpsText' in d));assert(!('latencyText' in d));assert(d.nodes.every(n=>n.status==='unconnected'));
+ session.select('student');
+ await assert.rejects(api.getStudentList(),/授权教师/);
+ await assert.rejects(api.getClassroomHistory(),/授权教师/);
+ await assert.rejects(api.getStudentDetail('20260002'),/自己的/);
+ await assert.rejects(api.getStudentHistory('20260002'),/自己的/);
+ await assert.rejects(api.controlDemo('start'),/教师/);
+ const c=await page('classroom');assert.equal(c.data.restricted,true);assert.equal(c.data.visible.length,0);assert.equal(c.data.classroom,null);
+ assert.match((await page('statistics')).data.error,/授权教师/);
+ const mine=await page('mine');assert.equal(mine.data.student.student_id,'20260001');
+ const self=await page('student',{self:'1'});assert.equal(self.data.student.student_id,'20260001');assert.equal(self.data.error,'');
+ const portrait=await page('portrait',{self:'1'});assert.equal(portrait.data.history.points.length,7);
+ const home=await page('home');assert.equal(home.data.viewer.role,'student');assert(!('attention_queue' in home.data.classroom));
+ const history=await page('history');assert.equal(history.data.isStudent,true);assert.equal(history.data.records.length,0);assert.equal(history.data.personalPoints.length,7);
+ const advice=await api.getAdvice('动作节奏'),summary=insights.personalSummary(await api.getMyHistory());
+ assert(advice.evidence.some(e=>e.includes(summary.average+'分')));assert.equal(advice.goal,'动作节奏');
+ config.mode='live';config.baseURL='https://example.invalid';let request;
+ wx.request=o=>{request=o; o.success({statusCode:200,data:{code:0,data:{student_id:'server-owned'}}});};
+ assert.equal((await api.getMyProfile()).student_id,'server-owned');assert(request.url.endsWith('/me/profile'));
+ await api.getMyHistory();assert(request.url.includes('/me/history?period=7'));
+ wx.request=o=>o.fail();await assert.rejects(api.getMyProfile(),/网络/);
+ config.mode='mock';config.baseURL='';session.select('teacher');
+ const teacherHome=await page('home');assert.equal(teacherHome.data.classroom.completionPercent,8);
+ console.log('PASS: roster-derived statistics, empty history, advice provenance, mock role isolation, personal routes, student/teacher page loads and live network failure without demo fallback.');
+})().catch(e=>{console.error(e);process.exitCode=1;});

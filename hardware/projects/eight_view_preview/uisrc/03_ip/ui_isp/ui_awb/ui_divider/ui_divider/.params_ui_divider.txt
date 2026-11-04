@@ -1,0 +1,12 @@
+DIVIDEND_DW : 48 : U : En :  : 2 : 64
+DIVISOR_DW : 32 : U : En :  : 2 : 64
+OUT_BLOCKING : 0 : G : En :  :  : 
+LATENCY : 50 : U : En :  : 0 : 50
+SIGN : unsigned : U : En : unsigned;;signed :  : 
+FLOW : non blocking : U : En : non blocking;;blocking :  : 
+OPERAND_SIGN : 0 : G : En :  :  : 
+DIVIDEND_CEIL_DW : 48 : G : En :  :  : 
+DIVISOR_CEIL_DW : 32 : G : En :  :  : 
+OUTPUT_DW : 80 : G : En :  :  : 
+FLOW_CONTROL : 0 : G : En :  :  : 
+OUT_BLOCKING_DISP : 0 : U : Dis :  :  : 

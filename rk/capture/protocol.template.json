@@ -1,0 +1,62 @@
+{
+  "status": "CONFIRMED_BY_LY",
+  "protocol": "QJ5V/1",
+  "bit_sha256": "78fd65db99e9193e292a5a6146a44d81c677a3f18c4883b6da9b093f65731d7f",
+  "parser_sha256": "d183048ed943baabc519c368762018470179365e7c21c961e63bb959764d98e8",
+  "source_archive_sha256": "b9d8f4f54b9c516483a891087be40475cd54b2c24011a863f19924787134132e",
+  "rois": {
+    "A_original": [
+      0,
+      0,
+      640,
+      360
+    ],
+    "A_gray": [
+      640,
+      0,
+      640,
+      360
+    ],
+    "A_gaussian": [
+      1280,
+      0,
+      640,
+      360
+    ],
+    "A_histogram": [
+      0,
+      360,
+      640,
+      360
+    ],
+    "B_original": [
+      640,
+      360,
+      640,
+      360
+    ]
+  },
+  "reserved_regions": [
+    [
+      1280,
+      360,
+      640,
+      360
+    ],
+    [
+      0,
+      720,
+      1920,
+      360
+    ]
+  ],
+  "metadata_roi": [
+    1280,
+    360,
+    40,
+    1
+  ],
+  "capture_approval": false,
+  "note": "Actual RTL/doc map confirmed. User permission for capture is still required separately; no on-chip SHA readback.",
+  "download_evidence_zip_sha256": "14839dfa21621e531085e98451767c7c634a38f9bbb0020a0b621c0c039e3995"
+}

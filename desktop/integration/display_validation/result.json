@@ -1,0 +1,193 @@
+{
+  "scope": "supplied CPU offline replay, not board pose inference",
+  "records": [
+    {
+      "raw_sha256": "f50413e417530a38bb6282402fec7955a56e807185b260b4c8f0cc306654ad03",
+      "frame_id": 0,
+      "session_id": "v6-offline-replay",
+      "source_frame_id": null,
+      "pose_backend": "mediapipe_cpu",
+      "transport": "offline_replay",
+      "validation_adaptations": [
+        {
+          "field": "persons[0].profile.identity_status",
+          "raw": "unbound",
+          "validation_value": "unknown",
+          "meaning": "not bound to a confirmed student"
+        }
+      ],
+      "no_sensor_overlay": true,
+      "persons": 1,
+      "counts_label": "动作次数 -- · 正确 -- · 错误 -- · 评分 --",
+      "state_label": "mediapipe_cpu · 离线回放 · 33点已载入 · preview-only／未严格同帧",
+      "raw_index": 0,
+      "screenshot": "POSE_REPLAY_0.png",
+      "screenshot_sha256": "6027d925afc9a0416e0e7148dd4a777c94770b1f02a1bfeb9a3b51b0a21b9099"
+    },
+    {
+      "raw_sha256": "4fa522bca4c02b88803e1a4630afd8c149c4725776617df29a040e8a75943752",
+      "frame_id": 1,
+      "session_id": "v6-offline-replay",
+      "source_frame_id": null,
+      "pose_backend": "mediapipe_cpu",
+      "transport": "offline_replay",
+      "validation_adaptations": [
+        {
+          "field": "persons[0].profile.identity_status",
+          "raw": "unbound",
+          "validation_value": "unknown",
+          "meaning": "not bound to a confirmed student"
+        }
+      ],
+      "no_sensor_overlay": true,
+      "persons": 1,
+      "counts_label": "动作次数 -- · 正确 -- · 错误 -- · 评分 --",
+      "state_label": "mediapipe_cpu · 离线回放 · 33点已载入 · preview-only／未严格同帧",
+      "raw_index": 1
+    },
+    {
+      "raw_sha256": "de320ce76751754c0833d3fd0397d86fa44921b93b7207cf1ad11ba890140e45",
+      "frame_id": 2,
+      "session_id": "v6-offline-replay",
+      "source_frame_id": null,
+      "pose_backend": "mediapipe_cpu",
+      "transport": "offline_replay",
+      "validation_adaptations": [
+        {
+          "field": "persons[0].profile.identity_status",
+          "raw": "unbound",
+          "validation_value": "unknown",
+          "meaning": "not bound to a confirmed student"
+        }
+      ],
+      "no_sensor_overlay": true,
+      "persons": 1,
+      "counts_label": "动作次数 -- · 正确 -- · 错误 -- · 评分 --",
+      "state_label": "mediapipe_cpu · 离线回放 · 33点已载入 · preview-only／未严格同帧",
+      "raw_index": 2
+    },
+    {
+      "raw_sha256": "bbb322dd9551ac09aa7955dcee9a0212eab4869745ee022fd6ee83e0e123de3a",
+      "frame_id": 3,
+      "session_id": "v6-offline-replay",
+      "source_frame_id": null,
+      "pose_backend": "mediapipe_cpu",
+      "transport": "offline_replay",
+      "validation_adaptations": [
+        {
+          "field": "persons[0].profile.identity_status",
+          "raw": "unbound",
+          "validation_value": "unknown",
+          "meaning": "not bound to a confirmed student"
+        }
+      ],
+      "no_sensor_overlay": true,
+      "persons": 1,
+      "counts_label": "动作次数 -- · 正确 -- · 错误 -- · 评分 --",
+      "state_label": "mediapipe_cpu · 离线回放 · 33点已载入 · preview-only／未严格同帧",
+      "raw_index": 3
+    },
+    {
+      "raw_sha256": "e38871efb85b951926e6b5a5a1a30a206b21711fb0f6481cc48ee44b93da30fe",
+      "frame_id": 4,
+      "session_id": "v6-offline-replay",
+      "source_frame_id": null,
+      "pose_backend": "mediapipe_cpu",
+      "transport": "offline_replay",
+      "validation_adaptations": [],
+      "no_sensor_overlay": true,
+      "persons": 0,
+      "counts_label": "动作次数 -- · 正确 -- · 错误 -- · 评分 --",
+      "state_label": "mediapipe_cpu · 离线回放 · 未检出姿态 · preview-only／未严格同帧",
+      "raw_index": 4
+    },
+    {
+      "raw_sha256": "da869bd2cc30da019f40969e812eaa46283e6e1a1dfb2721ac32ec02e9894e44",
+      "frame_id": 5,
+      "session_id": "v6-offline-replay",
+      "source_frame_id": null,
+      "pose_backend": "mediapipe_cpu",
+      "transport": "offline_replay",
+      "validation_adaptations": [
+        {
+          "field": "persons[0].profile.identity_status",
+          "raw": "unbound",
+          "validation_value": "unknown",
+          "meaning": "not bound to a confirmed student"
+        }
+      ],
+      "no_sensor_overlay": true,
+      "persons": 1,
+      "counts_label": "动作次数 -- · 正确 -- · 错误 -- · 评分 --",
+      "state_label": "mediapipe_cpu · 离线回放 · 33点已载入 · preview-only／未严格同帧",
+      "raw_index": 5,
+      "screenshot": "POSE_REPLAY_5.png",
+      "screenshot_sha256": "662751f34bc3dc439ef722a5a4ecdc6fe6b0d54b757895a0ce1e0f298a9c1fce"
+    },
+    {
+      "raw_sha256": "b7618fe6c0eafe40a5debdf9a5866f4d32499b2039723705cd037d816a251395",
+      "frame_id": 6,
+      "session_id": "v6-offline-replay",
+      "source_frame_id": null,
+      "pose_backend": "mediapipe_cpu",
+      "transport": "offline_replay",
+      "validation_adaptations": [],
+      "no_sensor_overlay": true,
+      "persons": 0,
+      "counts_label": "动作次数 -- · 正确 -- · 错误 -- · 评分 --",
+      "state_label": "mediapipe_cpu · 离线回放 · 未检出姿态 · preview-only／未严格同帧",
+      "raw_index": 6
+    },
+    {
+      "raw_sha256": "2d1d9e7a1d75b45805bb4ca5ce35fb4237190562926a52a67d7825e0382dd8ee",
+      "frame_id": 7,
+      "session_id": "v6-offline-replay",
+      "source_frame_id": null,
+      "pose_backend": "mediapipe_cpu",
+      "transport": "offline_replay",
+      "validation_adaptations": [],
+      "no_sensor_overlay": true,
+      "persons": 0,
+      "counts_label": "动作次数 -- · 正确 -- · 错误 -- · 评分 --",
+      "state_label": "mediapipe_cpu · 离线回放 · 未检出姿态 · preview-only／未严格同帧",
+      "raw_index": 7
+    },
+    {
+      "raw_sha256": "4a72886f8699c21cf59e1c723891d6eb5d7e45a79484463020cbf9948d250418",
+      "frame_id": 8,
+      "session_id": "v6-offline-replay",
+      "source_frame_id": null,
+      "pose_backend": "mediapipe_cpu",
+      "transport": "offline_replay",
+      "validation_adaptations": [],
+      "no_sensor_overlay": true,
+      "persons": 0,
+      "counts_label": "动作次数 -- · 正确 -- · 错误 -- · 评分 --",
+      "state_label": "mediapipe_cpu · 离线回放 · 未检出姿态 · preview-only／未严格同帧",
+      "raw_index": 8
+    },
+    {
+      "raw_sha256": "a098f727f787c264aec061a94012476dce292565637eb91f3b8b247fd66645aa",
+      "frame_id": 9,
+      "session_id": "v6-offline-replay",
+      "source_frame_id": null,
+      "pose_backend": "mediapipe_cpu",
+      "transport": "offline_replay",
+      "validation_adaptations": [],
+      "no_sensor_overlay": true,
+      "persons": 0,
+      "counts_label": "动作次数 -- · 正确 -- · 错误 -- · 评分 --",
+      "state_label": "mediapipe_cpu · 离线回放 · 未检出姿态 · preview-only／未严格同帧",
+      "raw_index": 9,
+      "screenshot": "POSE_REPLAY_9.png",
+      "screenshot_sha256": "662751f34bc3dc439ef722a5a4ecdc6fe6b0d54b757895a0ce1e0f298a9c1fce"
+    }
+  ],
+  "present": 5,
+  "absent": 5,
+  "network_attempts": [],
+  "exit_rc": 0,
+  "result": "PASS",
+  "input_JPEG": "NOT PROVIDED; no camera image copied",
+  "counts": "unverified, all missing values rendered --"
+}

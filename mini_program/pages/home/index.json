@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "今日课堂",
+  "usingComponents": {
+    "demo-notice": "/components/demo-notice/index"
+  }
+}

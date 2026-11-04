@@ -1,0 +1,63 @@
+{
+  "views": {
+    "original": {
+      "kind": "none",
+      "location": "",
+      "width": 1920,
+      "height": 1080,
+      "fps": 15,
+      "loop": false,
+      "status_url": "",
+      "provenance": "external",
+      "expected_processing_mode": ""
+    },
+    "gray": {
+      "kind": "mjpeg",
+      "location": "http://169.254.67.238:8090/stream.mjpg",
+      "width": 1920,
+      "height": 1080,
+      "fps": 15,
+      "loop": false,
+      "status_url": "http://169.254.67.238:8090/status.json",
+      "provenance": "external",
+      "expected_processing_mode": "gray"
+    },
+    "gaussian": {
+      "kind": "snapshot",
+      "location": "assets_demo\\gaussian_snapshot.jpg",
+      "width": 960,
+      "height": 540,
+      "fps": 0,
+      "loop": false,
+      "status_url": "",
+      "provenance": "replay",
+      "expected_processing_mode": "gaussian"
+    },
+    "histogram": {
+      "kind": "snapshot",
+      "location": "assets_demo\\histogram_snapshot.jpg",
+      "width": 960,
+      "height": 540,
+      "fps": 0,
+      "loop": false,
+      "status_url": "",
+      "provenance": "replay",
+      "expected_processing_mode": "histogram"
+    }
+  },
+  "mode_integration": {
+    "original": false,
+    "gray": true,
+    "gaussian": false,
+    "histogram": false
+  },
+  "analysis": {
+    "host": "127.0.0.1",
+    "port": 8766,
+    "rk_ai_url": "http://169.254.67.238:8090"
+  },
+  "presentation": {
+    "analysis_view": "gray"
+  },
+  "handoff_note": "Gray configured only, not connected. Gaussian/Histogram historical diagnostic snapshots, non-live. RK AI adapter dependencies missing; not connected."
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "qjzc.pose.wheels.v2",
+  "python": "3.11",
+  "abi": "cp311",
+  "glibc_required": ">=2.17 (manylinux2014)",
+  "note": "numpy is the manylinux build; the earlier musllinux build cannot load on glibc",
+  "total_mb": 76.9,
+  "wheels": [
+    {
+      "wheel": "numpy-1.26.4-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "bytes": 14222994,
+      "sha256": "7ab55401287bfec946ced39700c053796e7cc0e3acbef09993a9ad2adba6ca6e",
+      "platform_tag": "manylinux_2_17_aarch64.manylinux2014_aarch64",
+      "musl": false
+    },
+    {
+      "wheel": "mediapipe-0.10.14-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "bytes": 33017085,
+      "sha256": "1061d499d341e7f11dd7f18d5bee747e862db8ef47665ff777323282225d4315",
+      "platform_tag": "manylinux_2_17_aarch64.manylinux2014_aarch64",
+      "musl": false
+    },
+    {
+      "wheel": "opencv_python_headless-4.10.0.84-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "bytes": 29329705,
+      "sha256": "46071015ff9ab40fccd8a163da0ee14ce9846349f06c6c8c0f2870856ffa45db",
+      "platform_tag": "manylinux_2_17_aarch64.manylinux2014_aarch64",
+      "musl": false
+    },
+    {
+      "wheel": "protobuf-4.25.3-py3-none-any.whl",
+      "bytes": 156466,
+      "sha256": "f0700d54bcf45424477e46a9f0944155b46fb0639d69728739c0e47bab83f2b9",
+      "platform_tag": "any",
+      "musl": false
+    },
+    {
+      "wheel": "flatbuffers-24.3.25-py2.py3-none-any.whl",
+      "bytes": 26784,
+      "sha256": "8dbdec58f935f3765e4f7f3cf635ac3a77f83568138d6a2311f524ec96364812",
+      "platform_tag": "any",
+      "musl": false
+    },
+    {
+      "wheel": "absl_py-2.1.0-py3-none-any.whl",
+      "bytes": 133706,
+      "sha256": "526a04eadab8b4ee719ce68f204172ead1027549089702d99b9059f129ff1308",
+      "platform_tag": "any",
+      "musl": false
+    },
+    {
+      "wheel": "attrs-23.2.0-py3-none-any.whl",
+      "bytes": 60752,
+      "sha256": "99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1",
+      "platform_tag": "any",
+      "musl": false
+    }
+  ]
+}

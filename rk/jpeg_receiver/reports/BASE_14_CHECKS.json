@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "checks": {
+    "actual_fullHD_RTL_and_immutable_retry": {
+      "passed": true,
+      "decoded_images": 2,
+      "unique_carriers_per_JPEG": 2
+    },
+    "repeat_every_carrier_no_republish": {
+      "passed": true,
+      "completed_records": 2
+    },
+    "padded_stride_and_offset": {
+      "passed": true,
+      "jpeg_bytes_unchanged": true
+    },
+    "payload_corruption": {
+      "passed": true,
+      "rejected_as": "payload CRC"
+    },
+    "recover_on_next_valid_first": {
+      "passed": true,
+      "invalid_events": 1
+    },
+    "mixed_source_snapshot": {
+      "passed": true,
+      "rejected_as": "mixed source identity"
+    },
+    "missing_chunk_drops_old_record": {
+      "passed": true,
+      "published_only_second_JPEG": true
+    },
+    "mismatched_carrier_geometry": {
+      "passed": true,
+      "rejected_as": "image geometry"
+    },
+    "raw39_layout_is_not_carrier": {
+      "passed": true,
+      "rejected_as": "Expected negotiated512x64 YUYV/fieldNONE/single-plane carrier layout"
+    },
+    "mutable_mmap_view_rejected": {
+      "passed": true,
+      "rejected_as": "Caller must provide immutable copied bytes before QBUF"
+    },
+    "V4L2_ERROR_rejected": {
+      "passed": true,
+      "rejected_as": "V4L2_BUF_FLAG_ERROR"
+    },
+    "backwards_monotonic_rejected": {
+      "passed": true,
+      "rejected_as": "Receive monotonic time moved backwards"
+    },
+    "identity_not_replaceable_mid_record": {
+      "passed": true,
+      "rejected_as": "property 'identity' of 'Receiver' object has no setter"
+    },
+    "JPEG_SOF_geometry_matches_commit": {
+      "passed": true,
+      "rejected_as": "JPEG SOF and committed carrier geometry differ"
+    }
+  },
+  "hardware_access": false,
+  "kernel_or_service_modified": false,
+  "fixture_scope": "Two synthetic full-HD RTL JPEGs from42 recovered after actual RTL CSI packetizer;not actual RK/PHY/board capture",
+  "fixture_stream_sha256": "766dcf17e67a5e2d38af9c3e04fdc6bf6192968605f0b6a21c2a64d03966debc",
+  "fixture_actual_capture_identity": false,
+  "fixture_boot_and_bit_fields": "Explicit all-zero placeholders ONLY under OFFLINE_RTL_REPLAY",
+  "codec_JPEG_images": [
+    {
+      "bytes": 99699,
+      "sha256": "51bf764ad680591205b441cd031004910576e56cd308db42229cd25be8427e77"
+    },
+    {
+      "bytes": 99566,
+      "sha256": "fa9b87b62b9e39c53ed2f074c32f611e9c4a02284cc5f4d2848487364aea4b13"
+    }
+  ],
+  "current_sources": {
+    "qjjc_receiver.py": "8fb26c673ddb034383c2b056ab83e113f15670bb389adc71324bcacd14b47bea",
+    "jpeg_carrier_decode.py": "8f67e1d8d88ac02f4c49dcc66bc07a21123a20aa28c20612361e928b87a3940a"
+  }
+}
